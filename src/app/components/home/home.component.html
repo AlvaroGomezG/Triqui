@@ -8,7 +8,7 @@
     <div class="row m-5">
         <div class="col">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Jugador 1" aria-label="Nombre del jugador 1" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" placeholder="Jugador 1" aria-label="Nombre del jugador 1" aria-describedby="basic-addon2" #jugador1>
                 <div class="input-group-append">
                     <span class="input-group-text" id="basic-addon2">Ficha ( X )</span>
                 </div>
@@ -18,11 +18,14 @@
     <div class="row m-5">
         <div class="col">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Jugador 2" aria-label="Nombre del jugador 2" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" placeholder="Jugador 2" aria-label="Nombre del jugador 2" aria-describedby="basic-addon2" #jugador2>
                 <div class="input-group-append">
                     <span class="input-group-text" id="basic-addon2">Ficha ( O )</span>
                 </div>
             </div>
         </div>
     </div>
+    <form class="form-inline my-2 my-lg-0">
+        <button (click)="enviarNombres( jugador1.value ,jugador2.value )" class="btn btn-outline-primary my-2 my-sm-0" type="button"> Jugar </button>
+    </form>
 </body>
