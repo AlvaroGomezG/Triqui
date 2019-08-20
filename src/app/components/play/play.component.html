@@ -1,19 +1,32 @@
-<table class="table table-bordered table-dark">
-    <tbody>
-        <tr>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td>X</td>
-            <td>X</td>
-            <td>X</td>
-        </tr>
-    </tbody>
-</table>
+<div class="container" *ngIf="!ganador">
+    <h1 *ngIf="!turno">Turno: {{jugador1 | uppercase}}</h1>
+    <h1 *ngIf="turno">Turno: {{jugador2 | uppercase}}</h1>
+</div>
+
+<div class="container" *ngIf="!ganador">
+    <table class="table table-bordered table-dark">
+        <tbody>
+            <tr class=".td">
+                <td><button (click)="envarFicha(0)" type="button" class="btn btn-link btn-block">{{listaTriqui[0]}} </button></td>
+                <td><button (click)="envarFicha(1)" type="button" class="btn btn-link btn-block">{{listaTriqui[1]}}</button></td>
+                <td><button (click)="envarFicha(2)" type="button" class="btn btn-link btn-block">{{listaTriqui[2]}}</button></td>
+            </tr>
+            <tr>
+                <td><button (click)="envarFicha(3)" type="button" class="btn btn-link btn-block">{{listaTriqui[3]}}</button></td>
+                <td><button (click)="envarFicha(4)" type="button" class="btn btn-link btn-block">{{listaTriqui[4]}}</button></td>
+                <td><button (click)="envarFicha(5)" type="button" class="btn btn-link btn-block">{{listaTriqui[5]}}</button></td>
+            </tr>
+            <tr>
+                <td><button (click)="envarFicha(6)" type="button" class="btn btn-link btn-block">{{listaTriqui[6]}}</button></td>
+                <td><button (click)="envarFicha(7)" type="button" class="btn btn-link btn-block">{{listaTriqui[7]}}</button></td>
+                <td><button (click)="envarFicha(8)" type="button" class="btn btn-link btn-block">{{listaTriqui[8]}}</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="container" *ngIf="ganador">
+    <h1 *ngIf="turno">Ganador : {{jugador1 | uppercase}}</h1>
+    <h1 *ngIf="!turno">Ganador : {{jugador2 | uppercase}}</h1>
+</div>
