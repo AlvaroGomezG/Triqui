@@ -4,8 +4,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
 
@@ -14,7 +13,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  public enviarNombres(jugador1: string, jugador2: string ) {
+  // Envia los nombres de los juadores a la pantalla de play
+  enviarNombres(jugador1: string, jugador2: string ) {
   let nombres: string =  jugador1 + '-' + jugador2;
   this.router.navigate( ['/play',  nombres] );
   }
